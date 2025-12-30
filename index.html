@@ -141,119 +141,91 @@
         .subtitle {
             font-size: 1.2rem;
             max-width: 600px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2rem;
             opacity: 0.9;
             animation: fade-in 1s ease-out 1s both;
         }
 
-        /* Form Section */
-        .form-section {
-            background: repeating-linear-gradient(
-                0deg,
-                var(--cosmic-void),
-                var(--cosmic-void) 10px,
-                rgba(244, 228, 9, 0.05) 10px,
-                rgba(244, 228, 9, 0.05) 20px
-            );
-            padding: 6rem 2rem;
-            border-top: 3px solid var(--form-yellow);
-            border-bottom: 3px solid var(--form-yellow);
-        }
-
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(10, 1, 24, 0.8);
-            border: 2px solid var(--bureaucrat-beige);
-            padding: 3rem;
-            position: relative;
-            box-shadow: 0 0 50px rgba(244, 228, 9, 0.2);
-        }
-
-        .form-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px dashed var(--bureaucrat-beige);
-        }
-
-        .form-number {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--form-yellow);
-            font-size: 0.9rem;
-            letter-spacing: 0.2em;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            color: var(--bureaucrat-beige);
-            margin-bottom: 1rem;
-        }
-
-        .form-description {
-            opacity: 0.8;
-            font-size: 1rem;
-        }
-
-        .field-group {
-            margin-bottom: 2rem;
-        }
-
-        .field-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--temporal-green);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-        }
-
-        .field-input {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(232, 220, 196, 0.1);
-            border: 2px solid var(--bureaucrat-beige);
-            color: var(--bureaucrat-beige);
-            font-family: 'Courier Prime', monospace;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .field-input:focus {
-            outline: none;
-            border-color: var(--temporal-green);
-            background: rgba(0, 255, 136, 0.1);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-        }
-
-        .submit-button {
-            width: 100%;
-            padding: 1.5rem;
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
             background: var(--form-yellow);
-            border: none;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 900;
             color: var(--cosmic-void);
-            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.15em;
+            border: none;
+            cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            animation: fade-in 1s ease-out 1.5s both;
         }
 
-        .submit-button:hover {
+        .cta-button:hover {
             background: var(--temporal-green);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
         }
 
-        .submit-button:active {
-            transform: translateY(0);
+        /* Story Section */
+        .story-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .story-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--form-yellow);
+        }
+
+        .story-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: var(--form-yellow);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .story-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--temporal-green);
+            margin: 3rem 0 2rem;
+            padding: 1rem 0;
+            border-top: 1px dashed var(--bureaucrat-beige);
+            border-bottom: 1px dashed var(--bureaucrat-beige);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .story-content p:first-of-type::first-letter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.8;
+            margin: 0.1rem 0.5rem 0 0;
+            color: var(--form-yellow);
         }
 
         /* Characters Section */
@@ -261,6 +233,13 @@
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            background: repeating-linear-gradient(
+                0deg,
+                var(--cosmic-void),
+                var(--cosmic-void) 10px,
+                rgba(244, 228, 9, 0.05) 10px,
+                rgba(244, 228, 9, 0.05) 20px
+            );
         }
 
         .section-title {
@@ -314,6 +293,57 @@
             line-height: 1.8;
         }
 
+        /* Contact Section */
+        .contact-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .contact-box {
+            background: rgba(10, 1, 24, 0.8);
+            border: 2px solid var(--bureaucrat-beige);
+            padding: 3rem;
+            position: relative;
+            box-shadow: 0 0 50px rgba(244, 228, 9, 0.2);
+        }
+
+        .contact-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--form-yellow);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background: var(--temporal-green);
+            color: var(--cosmic-void);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: var(--form-yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(244, 228, 9, 0.4);
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -341,7 +371,7 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .form-container {
+            .contact-box {
                 padding: 2rem 1.5rem;
             }
             
@@ -352,6 +382,10 @@
             
             .stamp-text {
                 font-size: 1rem;
+            }
+
+            .story-content p {
+                text-align: left;
             }
         }
 
@@ -372,6 +406,11 @@
         .character-card:nth-child(1) { animation-delay: 0.1s; }
         .character-card:nth-child(2) { animation-delay: 0.2s; }
         .character-card:nth-child(3) { animation-delay: 0.3s; }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -386,41 +425,348 @@
         <h1>SUPERMONKEYS</h1>
         <p class="tagline">Cosmic Bureaucracy</p>
         <p class="subtitle">
-            When the universe needs saving, you don't call heroes. You file Form TRF-9843/B in triplicate and wait for approval from the Temporal Regulatory Framework.
+            When Martin Kettering filed a routine incident report about a fuel shortage, he didn't expect to be voluntold to travel back in time and create humanity.
         </p>
+        <a href="#story" class="cta-button">Read the Story</a>
     </section>
 
-    <!-- Form Section -->
-    <section class="form-section">
-        <div class="form-container">
-            <div class="form-header">
-                <div class="form-number">FORM TRF-CONTACT/2025</div>
-                <h2 class="form-title">Temporal Contact Request</h2>
-                <p class="form-description">
-                    Register your interest in this improbable narrative. Processing time: 3-5 business eons.
-                </p>
-            </div>
-            <form>
-                <div class="field-group">
-                    <label class="field-label" for="name">Designation (Legal Name):</label>
-                    <input class="field-input" type="text" id="name" placeholder="As it appears on your reality passport">
-                </div>
-                <div class="field-group">
-                    <label class="field-label" for="email">Quantum Communications Address:</label>
-                    <input class="field-input" type="email" id="email" placeholder="yourname@yourdomain.spacetime">
-                </div>
-                <div class="field-group">
-                    <label class="field-label" for="timeline">Current Timeline Status:</label>
-                    <select class="field-input" id="timeline">
-                        <option>Prime Timeline (Original)</option>
-                        <option>Timeline Alpha-7 (Slightly Askew)</option>
-                        <option>Timeline Beta-12 (Significantly Weird)</option>
-                        <option>Timeline Gamma-∞ (Beyond Repair)</option>
-                        <option>I Don't Know Anymore</option>
-                    </select>
-                </div>
-                <button class="submit-button" type="submit">Submit for Processing</button>
-            </form>
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+        <div class="story-header">
+            <h2 class="story-title">The Story So Far</h2>
+            <p class="story-intro">
+                Someone has to go back and build the moon, genetically engineer some apes, and generally ensure that humans exist in the first place; and apparently that someone is Martin, because he's the one who noticed the problem.
+            </p>
+            <p class="story-intro">
+                Millions of years earlier, a group of proto-humans with reality warping abilities are using their god-like powers for truly important tasks: telekinetically moving fruit so they don't have to walk, and generally being as lazy as cosmically possible.
+            </p>
+            <p class="story-intro">
+                They may be supermonkeys, however they are still fundamentally, monkeys.
+            </p>
+        </div>
+
+        <div class="story-content">
+            <h3 class="chapter-title">Chapter One</h3>
+            
+            <p>The tea was almost perfect.</p>
+
+            <p>Martin Kettering had been working on his technique for three years; ever since the kettle in the break room had been replaced with one that actually reached boiling point, and he'd finally cracked it. Exactly two minutes and forty seconds for the bag to steep. A precise seventeen millimetres of milk. No sugar, because sugar was for people who didn't respect the craft.</p>
+
+            <p>He was lifting the mug to his lips, about to take that first transcendent sip, when Sharon from T.O walked in with a clipboard.</p>
+
+            <p>Martin's hand paused halfway to his mouth. Sharon never had good news. Sharon's entire job was to have categorically bad news and then make you sign things about it.</p>
+
+            <p>"Martin," she said, in the tone of someone who'd already moved past sympathy and into administrative efficiency. "Got a minute?"</p>
+
+            <p>"Not really, no."</p>
+
+            <p>"Brilliant." She sat down across from him and clicked her pen. It was one of those four-colour pens that nobody had used since 1987, except Sharon, who claimed it was more efficient than carrying multiple pens. "So we've got a bit of a situation with the Anthropic Causality Loop."</p>
+
+            <p>Martin took a sip of his tea before she could ruin it completely. Still good. That was something.</p>
+
+            <p>"The what now?"</p>
+
+            <p>"Anthropic Causality Loop. You know, the whole bootstrap paradox where humanity had to engineer its own existence because of that fuel cock-up back in.. well, forward in..." She waved her hand vaguely. "Time travel grammar is a nightmare. Anyway, you filed the original incident report."</p>
+
+            <p>"I file a lot of incident reports, Sharon. That's literally my job."</p>
+
+            <p>"Yes, but this one was special. Mission ACL-7793. Ring any bells?"</p>
+
+            <p>Martin stared at her. "That was nine months ago. We had to make an emergency landing because someone; I'm not naming names but it was Gary, didn't properly calculate fuel consumption when we diverted to avoid that temporal anomaly near..."</p>
+
+            <p>"Yes, yes, all very embarrassing for Gary. The thing is, we've run the numbers, checked the historical records, cross referenced with the archaeological data, and it turns out that emergency landing was the emergency landing. The one where we, where someone, rather.. had to bioengineer the local primates to create humanity."</p>
+
+            <p>Martin put his tea down carefully. "I'm sorry, what?"</p>
+
+            <p>"We created ourselves. Or rather, we will have created ourselves. Or we're going to have already created ourselves. Look, the grammar's a mess, but the point is someone needs to go back and do it, otherwise we get a causality violation and..." She made a vague exploding gesture with her hands.</p>
+
+            <p>"Right, but surely there are people trained for this sort of thing? Specialists?"</p>
+
+            <p>Sharon consulted her clipboard. "Well, technically yes, but they're all tied up with the Epsilon Eridani situation, and besides, you filed the original report which makes you the designated responsible party under Section 47-B of the Temporal Continuity Act."</p>
+
+            <p>"That's not; I don't think that's how designated responsibility works."</p>
+
+            <p>"I've got the forms right here." She slid a stack of papers across the table. They were depressingly thick. "Ship leaves Thursday."</p>
+
+            <p>"Thursday? I can't possibly, I've got plans Thursday."</p>
+
+            <p>Sharon looked up from her clipboard with an expression of practiced sympathy that suggested she'd heard this before and it hadn't mattered then either. "I understand this is inconvenient..."</p>
+
+            <p>"Inconvenient? Sharon, there's a double episode of The Archers on Thursday. They're finally going to resolve the thing with Brian's solar farm investment."</p>
+
+            <p>"I'm sure you can catch up when you get back."</p>
+
+            <p>"When I get back? Sharon, this is ten thousand years in the past we're talking about. I'll have been back for literally the entire span of human civilization by the time I get back."</p>
+
+            <p>"Yes, that is a bit of a head-scratcher, isn't it? But the temporal mechanics are sound. From your subjective perspective, you'll be gone about six weeks. There's a return protocol built into the mission parameters, you just have to.." She flipped through her papers. "..establish stable population baseline, implement genetic sunset protocols for enhanced abilities, and ensure sufficient cultural amnesia regarding origins.' Then you pop back through the temporal return window we'll set up. Should be fine."</p>
+
+            <p>"Should be?"</p>
+
+            <p>"Is almost certainly definitely probably fine. There's a waiver."</p>
+
+            <p>Of course there was a waiver.</p>
+
+            <p>Martin looked at his tea. It was getting cold. Of course it was getting cold. That's what happened when Sharon from Temporal Operations showed up with a clipboard.</p>
+
+            <p>"What if I just... don't?" he said. "What if I refuse?"</p>
+
+            <p>Sharon's expression didn't change, but somehow became more sympathetic and more immovable at the same time. "Then humanity never exists, including you, which means you can't refuse, which means you have to go, which means humanity exists, which means; well, you see the problem. It's already happened, Martin. We're just making sure it keeps having happened."</p>
+
+            <p>"That doesn't make any sense."</p>
+
+            <p>"Welcome to temporal mechanics. There's a support group, meets Tuesdays, but obviously you won't be able to attend because you'll be busy being the reason any of us exist." She pushed the clipboard toward him. "I need your signature on pages 4, 7, 12, and 23. Initial the rest."</p>
+
+            <p>Martin stared at the forms. At his cooling tea. At Sharon's relentlessly efficient four-color pen.</p>
+
+            <p>"I don't suppose there's any chance someone else could do it?"</p>
+
+            <p>"We asked around. Nobody volunteered."</p>
+
+            <p>"Right. Obviously." He picked up the pen she'd offered him. It was disappointingly normal, just one colour. "And there's definitely no way to just... not create humanity?"</p>
+
+            <p>"Causality loop, Martin. It's airtight. You could try to fight it, but the universe tends to get tetchy about that sort of thing. Last bloke who tried ended up creating humanity anyway, but via a much more complicated route involving three extra ice ages and a volcano. Very inefficient. We'd rather stick with the standard timeline."</p>
+
+            <p>Martin signed page 4. Then page 7. By page 12 he'd stopped reading what he was signing. It wouldn't matter anyway. He was going to create humanity whether he liked it or not, apparently.</p>
+
+            <p>"One question," he said, initialing page 19. "Why did we build a moon? That seems excessive."</p>
+
+            <p>Sharon consulted her notes. "Tidal lock prevention and orbital stabilization. Also, apparently the planet needed more romantic sunsets for cultural development purposes. That bit's in the appendix if you want to read it on the trip."</p>
+
+            <p>"Can't wait."</p>
+
+            <p>She collected the signed forms with the practiced efficiency of someone who'd just ruined someone's Thursday many times before. "Right, that's you sorted then. Report to Hangar 7 on Thursday, 0800 hours. You'll be issued your equipment, costume, and operations manual. Any questions?"</p>
+
+            <p>"Will there at least be tea?"</p>
+
+            <p>"We'll pack you some bags. Can't promise the water will be any good 10,000 years ago, though. Bit of a crapshoot on that front."</p>
+
+            <p>"Fantastic."</p>
+
+            <p>Sharon stood up, tucking her clipboard under her arm. "Oh, and Martin? Best not to get too attached to any of the proto-humans. Makes the whole genetic sunset thing a bit awkward emotionally."</p>
+
+            <p>"Genetic sunset?"</p>
+
+            <p>"Where you take away their telekinetic abilities before you leave. Can't have them building cities before they've invented writing, plays havoc with the timeline. It's all in the manual."</p>
+
+            <p>She left before he could ask any more questions that would probably just make him feel worse.</p>
+
+            <p>Martin sat alone in the break room, staring at his cold tea. Somewhere in the building, in a timeline that was definitely happening even though it hadn't happened yet, humanity was evolving, building civilizations, inventing agriculture and the wheel and eventually temporal mechanics, all so they could send him back to make sure they got started in the first place.</p>
+
+            <p>It was, he reflected, a very stupid way to run a universe.</p>
+
+            <p>He'd have to remember to cancel his subscription to Netflix, and Amazon, oh and Spotify, Google, the list goes on. No point paying for them while he was gone, even if he'd technically be back before he left.</p>
+
+            <p>The microwave hummed in the corner. Someone had left fish curry in there again. The smell would probably outlast human civilization.</p>
+
+            <p>Martin got up, rinsed his mug in the sink, and headed back to his desk. He had three days to wrap up his filing, write instructions for his plants, and figure out how to explain to his sister why he was going to miss her birthday.</p>
+
+            <p>Again.</p>
+
+            <p>At least the Archers would still be there when he got back. Probably. Assuming he got the causality loop right and humanity invented radio broadcasting on schedule.</p>
+
+            <p>No pressure.</p>
+
+            <h3 class="chapter-title">Chapter Two</h3>
+
+            <p>The fig was approximately twenty three feet away, which was roughly twenty three feet further than Grak could be bothered to move.</p>
+
+            <p>He was comfortable. He'd spent the better part of the morning arranging the moss in his sleeping spot to achieve optimal lumbar support, and he wasn't about to undo all that work just because he was hungry. The fig floated over obediently, wobbling slightly in the air as Grak's concentration wavered. He caught it with one hand without opening his eyes and bit into it. Perfect ripeness. He'd done well choosing this tree yesterday when he'd vibrated all the unripe ones off their branches to speed up the selection process.</p>
+
+            <p>Next to him, Shara was attempting to remove a tick from behind her ear. She could have asked Grak to help; grooming was usually a communal activity but she'd discovered last week that if she vibrated at just the right frequency, the tick would simply let go and fall off. It took about three minutes of sustained buzzing, during which time her entire head tingled unpleasantly, but it beat having to actually coordinate with someone else. The tick dropped into the grass. Shara flicked it away telekinetically, sending it tumbling through the air until it landed in the stream forty feet below their rocky outcropping.</p>
+
+            <p>Excessive, perhaps. But satisfying.</p>
+
+            <p>Across the clearing, Bront was having a disagreement with a boulder. The boulder had been there for as long as anyone could remember; a massive thing, easily three times Bront's height, that sat inconveniently in the middle of the best sunbathing spot. Bront had decided, in the way that Bront decided most things, that today was the day it would move. He placed both hands on its surface, closed his eyes, and pushed.</p>
+
+            <p>The boulder didn't appreciate this. It had been sitting there for several thousand years and had no particular interest in relocating. But Bront was nothing if not persistent, and after about thirty seconds of concentrated effort, the boulder began to shift. Slowly at first, then with increasing speed, it slid sideways across the ground, carving a deep furrow in the earth.</p>
+
+            <p>Bront followed it, hands still pressed to the stone, guiding it with his mind toward the edge of the clearing. When it reached a suitable distance; far enough that it wouldn't shade the sunbathing spot but not so far that it blocked the good view of the valley, he let it settle with a satisfied grunt.</p>
+
+            <p>The entire operation had taken less than two minutes. Bront immediately lay down in the newly liberated patch of sun and fell asleep.</p>
+
+            <p>In the trees above, a family group was harvesting nuts. The traditional method involved climbing to the branches, picking the nuts by hand, and carrying them down. This was tedious and involved actual effort, so nobody did it that way any longer.</p>
+
+            <p>Instead, the matriarch of the group, a brute of a female who had been doing this for longer than anyone else had been alive simply pointed at each nut bearing branch in turn. The branches vibrated gently, almost musically, and the nuts obediently dropped in a neat pile at the base of the tree. The youngsters could then collect them at their leisure without having to do any climbing whatsoever.</p>
+
+            <p>The day proceeded as days generally did: eating, sleeping, grooming, moving things that didn't need moving, and occasionally squabbling over who got the best napping spots. The group had no concept of history, no real awareness that they were doing anything unusual. The abilities were simply part of life, like having hands or being able to see. You used them when convenient and ignored them when you couldn't be bothered.</p>
+
+            <p>It was late afternoon when Grak noticed the light.</p>
+
+            <p>He'd been dozing, half-awake in that pleasant state between sleep and wakefulness, when something in the sky caught his attention. A bright point, moving in a way that stars didn't move.</p>
+
+            <p>It was getting larger.</p>
+
+            <p>Grak watched it with mild interest. Birds didn't glow like that. Nor did they move in straight lines. Perhaps it was some kind of very determined firefly he pondered while squinting to try to focus more.</p>
+
+            <p>The light grew brighter, descending toward the valley several miles to the west. There was a sound now, too; a low thrumming that Grak could feel in his chest even from this distance. It wasn't the sort of vibration he or his group made. This was deeper, more persistent, almost mechanical in its regularity, it had definitely piqued his interest.</p>
+
+            <p>Shara had noticed it too. She sat up, ears forward, staring at the distant glow. Several others in the group were stirring, pointing, chattering softly. There was a hum as whispers were made.</p>
+
+            <p>The light touched down somewhere beyond the ridge. There was a bright flash, then nothing. The thrumming stopped.</p>
+
+            <p>The group waited. Nothing emerged from the valley. No predator, no fire, no obvious threat. After a minute or two the majority of them had lost interest and went back to what they were doing, after several minutes of silence everyone else had too.</p>
+
+            <p>Grak thought to himself whatever had landed over there, it wasn't his problem. His problem was that he'd finished his fig and the next closest one was even further away than the last had been.</p>
+
+            <p>He considered his options. He could get up and walk to the tree. He could float another fig over. Or he could just take a nap and deal with hunger later.</p>
+
+            <p>He chose the nap.</p>
+
+            <p>In the valley beyond the ridge, something was happening. Equipment was being unloaded. Surveys were being conducted. A man who'd rather be home listening to paint dry was checking his instruction manual and trying to figure out which end of the genetic modification device was which.</p>
+
+            <p>But Grak knew nothing of this, and wouldn't have cared if he did. He had moss to sleep on and the sun was at a pleasant angle. There were no immediate threats to his continued existence so life was, by his standards, perfectly acceptable.</p>
+
+            <p>He dozed, dreaming simple dreams of ripe figs and comfortable rocks, unaware that in six weeks' time he would lose the ability to move objects with his mind, and in ten thousand years his descendants would argue about whether people like him had ever existed at all.</p>
+
+            <p>For now, though, the sun was warm and the moss was soft and somewhere in the distance, something that would eventually matter was beginning to happen.</p>
+
+            <p>Grak adjusted his position slightly, telekinetically shifting the moss beneath him to better support his lower back, and settled in for a proper sleep.</p>
+
+            <p>The universe could sort itself out. He had napping to do.</p>
+
+            <h3 class="chapter-title">Chapter Three</h3>
+
+            <p>The landing was absolutely textbook perfect, which Martin supposed made sense given that it had already happened and the universe had a vested interest in making sure it kept happening exactly as it had happened before.</p>
+
+            <p>The temporal displacement field collapsed with a sound like a very large rubber band snapping, and the ship settled onto solid ground with barely a twitch. Through the viewport, Martin could see early morning sun filtering through what appeared to be acacia trees. Somewhere nearby, something was making a rhythmic chirping sound that was either a bird or perhaps an insect having strong opinions about its territory.</p>
+
+            <p>"Right then," said Phillips, the pilot, checking his instruments with the weary efficiency of someone who'd done this route too many times. "Ten thousand years BC, give or take a century perhaps. Welcome to Earth."</p>
+
+            <p>"How's the fuel situation?" Martin asked, though he already knew the answer. He'd read the report. He'd written the report. This was the fuel shortage.</p>
+
+            <p>Phillips tapped a gauge that was displaying a number in an alarming shade of red. "We've got enough to keep life support running and maybe. Flying home? Not a chance I'm afraid."</p>
+
+            <p>"How much is not so much?" he asked blinking slowly.</p>
+
+            <p>"We're about forty percent short. Forty-three if you want the numbers to three significant figures, which I assume you do, well, because you're Martin."</p>
+
+            <p>Martin did want the numbers to three significant figures, how dare he be so on the money he thought but now wasn't the time to admit it. "And the fuel synthesis equipment?"</p>
+
+            <p>"In the cargo bay, along with your genetic modification kit, your moon construction manual, and..." Phillips consulted his manifest, "...one ceremonial costume, authentic period appearance."</p>
+
+            <p>Martin had been trying not to think about the costume. He'd seen it during the pre-flight briefing. Sharon had presented it with the sort of practiced neutrality that suggested she'd had this conversation before and knew exactly how it was going to go.</p>
+
+            <p>"It's based on extensive archaeological evidence," she'd said.</p>
+
+            <p>"It's a bird head," Martin had replied.</p>
+
+            <p>"Ibis, specifically. Very sacred. Associated with Thoth, god of writing and magic."</p>
+
+            <p>"I'm not wearing a bird head for six weeks, Sharon."</p>
+
+            <p>"Then you'll be pleased to know that according to our projections, you'll only need to wear it when interacting with the local population. The rest of the time you can dress any way you like."</p>
+
+            <p>The argument had gone downhill from there, but the outcome had been inevitable. The costume was already packed. The timeline was already set. Somewhere in an Egyptian tomb ten thousand years from now, there would be wall paintings of a figure with an ibis head overseeing the construction of pyramids, and if Martin refused to wear the costume, the universe would presumably find some other way to make it happen that would be significantly less convenient for everyone involved.</p>
+
+            <p>Causality was an utter twat like that.</p>
+
+            <p>"Let's see what we're working with," Martin said, standing and immediately hitting his head on the low doorframe. The ship was a light transport vessel, designed for efficiency rather than comfort, which meant everything was slightly too small and positioned exactly where you'd walk into it.</p>
+
+            <p>The cargo bay was cramped and smelled faintly of oil or some other lubricating fluid and whatever the temporal displacement system used for coolant. Martin's equipment was secured along one wall: several large cases marked with hazard symbols and warnings in three languages, which he thought strange for a second as he could only say three words in french and none of them were used here; a smaller case containing the genetic modification array, and one distinctive container that was almost certainly the costume.</p>
+
+            <p>He ignored that one for now.</p>
+
+            <p>The fuel synthesis equipment was more substantial than he'd expected. According to the manual; and Martin had read the manual twice during the flight because the alternative was making small talk with Phillips, the process required several stages. First, you needed to establish a chemical reactor using locally available materials. Then you had to source the correct geological formations for raw materials. Finally, you needed to run the synthesis process continuously for approximately four weeks to generate enough fuel for the return trip.</p>
+
+            <p>"The good news," the manual had cheerfully noted, "is that with proper application of available resources, fuel synthesis can be accomplished with minimal environmental impact and maximum efficiency. Remember: we're here to preserve the timeline, not disrupt it!"</p>
+
+            <p>The manual had been written by someone who'd never actually had to synthesize fuel ten thousand years in the past, Martin was certain of that.</p>
+
+            <p>He pulled up the geological survey data on his tablet. The ship's sensors had been scanning during descent, and the results were... actually quite promising. There was an iron deposit about three miles west, a substantial limestone formation to the north, and underground water sources scattered throughout the valley. Everything he needed was conveniently located within reasonable distance.</p>
+
+            <p>Almost as if someone had chosen this landing site specifically for its geological convenience.</p>
+
+            <p>Martin stared at the survey data. Then he checked the mission briefing again. Landing coordinates had been predetermined based on "historical evidence of construction activity in the region."</p>
+
+            <p>Of course they had.</p>
+
+            <p>He was going to land exactly where he'd need to land to build exactly what he'd need to build, because he'd already built it, which was how they knew where to send him to build it.</p>
+
+            <p>"Something wrong?" Phillips asked, peering over his shoulder at the tablet.</p>
+
+            <p>"Just coming to terms with the fact that I'm trapped in a loop of my own necessary existence."</p>
+
+            <p>"First time doing temporal causality work?"</p>
+
+            <p>"Hopefully last time."</p>
+
+            <p>Phillips laughed. "That's what they all say. Right, I'm going to run a full diagnostic on the fuel systems, see if there's any way to squeeze out a bit more efficiency. You'll want to start surveying for your reactor site. Sooner we get the synthesis running, sooner we can all go home."</p>
+
+            <p>Martin nodded and headed for the airlock. The suit he'd been issued was light but supposedly proof against anything Earth could throw at him: temperature regulation, basic medical sensors, and a communication system that would let him stay in touch with Phillips back at the ship. It was also, he noted with resignation, designed to be worn under the ceremonial costume.</p>
+
+            <p>He stepped out into ten thousand years ago.</p>
+
+            <p>The air was immediately different. Cleaner, somehow. Less processed. It smelled of earth and green things and the faint musk of animals Martin couldn't identify. The sun was warm on his face, the sky an almost aggressive shade of blue that suggested the invention of air pollution was still a long way off.</p>
+
+            <p>It was, Martin had to admit, quite nice.</p>
+
+            <p>He checked his tablet, oriented himself using the geological survey, and started walking west toward the iron deposits. The ground was rocky but navigable, scattered with low shrubs and the occasional acacia tree. In the distance, he could see a ridge line that might offer a good vantage point for surveying the area.</p>
+
+            <p>The tablet beeped. Movement detected, approximately four hundred meters north-north-east.</p>
+
+            <p>Martin looked up. At first he saw nothing, then movement caught his eye. Something large was floating through the air about twenty feet off the ground. He zoomed in with the tablet's camera.</p>
+
+            <p>It was a rock. Just a rock, roughly the size of a small car, drifting lazily through the air like a balloon that had escaped from a particularly geological birthday party.</p>
+
+            <p>As Martin watched, the rock settled gently onto the ground near a cluster of other rocks. There was a pause, then all of the rocks rearranged themselves into a more aesthetically pleasing configuration. One of them rotated ninety degrees. Another one shifted six inches to the left.</p>
+
+            <p>Then they stopped moving, apparently satisfied.</p>
+
+            <p>Three miles away, Grak had shifted slightly in his sleep, dreaming about figs. His unconscious mind had idly rearranged the nearest objects for better feng shui without him even noticing. The rocks would stay that way until someone else got comfortable.</p>
+
+            <p>Martin stared at his tablet. Then at the rocks. Then back at his tablet.</p>
+
+            <p>"Phillips," he said into his comm.</p>
+
+            <p>"Go ahead."</p>
+
+            <p>"The local population. The proto-humans. They can move things with their minds, yes?"</p>
+
+            <p>"According to the briefing, yes. Telekinetic abilities, some kind of vibrational manipulation, very powerful but apparently not very motivated. Why?"</p>
+
+            <p>"Because I'm watching rocks rearrange themselves and I'm trying to determine if this is normal proto-human activity or if I'm having some kind of temporal displacement psychosis."</p>
+
+            <p>"Probably the proto-humans. The medication for temporal displacement psychosis makes you see things that aren't moving, not things that are moving."</p>
+
+            <p>"That's not as reassuring as you think it is."</p>
+
+            <p>Martin continued his survey, making careful notes about the geological features and trying not to think too hard about the implications of unconscious telekinesis. By late afternoon, he'd identified a suitable location for the fuel reactor: a relatively flat area near the iron deposits with good access to water and limestone. The site was also, he noted with growing resignation, exactly where the archaeological evidence suggested ancient construction had taken place.</p>
+
+            <p>Of course it was.</p>
+
+            <p>He headed back to the ship as the sun began to set, painting the sky in shades of orange and purple that would have been quite beautiful if he wasn't so tired. Phillips had dinner ready, a rehydrated something that claimed to be beef stew and tasted approximately like cardboard that had been briefly introduced to the concept of meat.</p>
+
+            <p>"Tomorrow you'll want to start establishing contact with the locals," Phillips said between mouthfuls. "Get them familiar with you before you start asking them to move mountains."</p>
+
+            <p>"About that," Martin said. "The costume."</p>
+
+            <p>"The ibis head? What about it?"</p>
+
+            <p>"It's ridiculous."</p>
+
+            <p>"It's historical."</p>
+
+            <p>"It's a bird head."</p>
+
+            <p>"It's a sacred ibis head that will establish your authority as a divine figure in their cultural framework, according to the archaeological evidence we found in Egyptian tombs ten thousand years from now, which we know about because you're going to put it there by wearing the bloody costume."</p>
+
+            <p>Phillips had a point, Martin supposed. A stupid point, but still a point.</p>
+
+            <p>"Fine. But I'm going on record that this is humiliating."</p>
+
+            <p>"Noted. Your objection has been filed with the Temporal Operations Department and will be reviewed in approximately never."</p>
+
+            <p>Martin finished his cardboard stew and retired to his bunk, where he spent the next several hours reading the manual on genetic modification protocols and trying not to think about how many things could go catastrophically wrong.</p>
+
+            <p>Outside, the stars wheeled overhead in patterns that wouldn't be seen again for ten thousand years. Somewhere in the distance, Grak and his group slept peacefully, dreaming of figs and comfortable rocks, completely unaware that their entire existence was about to become significantly more complicated.</p>
+
+            <p>Martin eventually fell asleep with the manual still open on his chest, his dreams a confused mess of ibis heads and telekinetic apes and Sharon's four-color pen signing forms that would determine the fate of the entire human species.</p>
+
+            <p>When he woke the next morning, the ibis head was waiting for him.</p>
+
+            <p>It was time to become a god.</p>
+
+            <p>Or at least, time to dress like one and hope the proto-humans were too lazy to question it.</p>
         </div>
     </section>
 
@@ -429,26 +775,39 @@
         <h2 class="section-title">Personnel Files</h2>
         <div class="character-grid">
             <div class="character-card fade-in-up">
+                <h3 class="character-name">Martin Kettering</h3>
+                <div class="character-role">Designated Responsible Party</div>
+                <p class="character-description">
+                    A man who just wanted a good cup of tea and a quiet life filing incident reports. Instead, he got voluntold to create humanity because he noticed a fuel shortage. Now he's ten thousand years in the past wearing a bird head and questioning his career choices.
+                </p>
+            </div>
+            <div class="character-card fade-in-up">
                 <h3 class="character-name">Grak</h3>
-                <div class="character-role">Former Enforcer, Current Problem</div>
+                <div class="character-role">Chief Napping Officer</div>
                 <p class="character-description">
-                    Once the universe's most efficient problem-solver. Now the universe's most efficient problem. Retired from violence to pursue a quieter life, but the cosmos had other plans. Specifically, plans involving paperwork.
+                    A proto-human with reality-warping telekinetic powers who uses them exclusively to avoid walking to his food. Perfectly content with life until some strange being in a bird costume shows up and starts making unreasonable demands about construction projects.
                 </p>
             </div>
             <div class="character-card fade-in-up">
-                <h3 class="character-name">The Bureaucrats</h3>
-                <div class="character-role">Temporal Regulatory Framework</div>
+                <h3 class="character-name">Sharon from T.O.</h3>
+                <div class="character-role">Temporal Operations</div>
                 <p class="character-description">
-                    They don't stop time travelers because time travel is dangerous. They stop them because they didn't file the correct forms. Somewhere between middle management and cosmic horror.
+                    The woman with the clipboard and the four-color pen. Her job is to deliver categorically bad news and make you sign things about it. Has mastered the art of practiced sympathy that suggests she's had this conversation before and it didn't matter then either.
                 </p>
             </div>
-            <div class="character-card fade-in-up">
-                <h3 class="character-name">The Universe</h3>
-                <div class="character-role">Unwilling Participant</div>
-                <p class="character-description">
-                    Tired. So very tired. Just wants a day off but keeps getting dragged into increasingly absurd temporal incidents that require increasingly absurd amounts of paperwork to resolve.
-                </p>
-            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-box">
+            <h2 class="contact-title">Temporal Communications</h2>
+            <p class="contact-text">
+                Questions? Feedback? Want to discuss the finer points of causality loops and bureaucratic inevitability?
+            </p>
+            <a href="mailto:grak@spacemonkeys.co.uk?subject=SuperMonkeys%20Inquiry" class="contact-link">
+                Send Transmission
+            </a>
         </div>
     </section>
 
@@ -491,12 +850,6 @@
 
         document.querySelectorAll('.character-card').forEach(card => {
             observer.observe(card);
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Form TRF-CONTACT/2025 received. Your request has been forwarded to the Temporal Processing Department. Expected response time: 3-5 business eons. Thank you for your patience.');
         });
     </script>
 </body>
